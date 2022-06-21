@@ -1,0 +1,16 @@
+<h3> Send Message Component </h3>
+<div class="container-fluid m-3">
+    <div class="row w-50 mb-3">
+        <div class="col">
+            <input type="text" [(ngModel)]="msg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" (click)="send()"> Send </button>
+        </div>
+        <div class="col">
+            <button class="btn btn-danger" (click)="reset()"> Reset </button>
+        </div>
+    </div>
+</div>

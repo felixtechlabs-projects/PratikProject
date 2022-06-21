@@ -1,0 +1,73 @@
+<h3 [appColor]="'red'"> Directives </h3>
+
+<ul>
+    <li> Structural Directives </li>
+        <ul>
+            <li> *ngIf </li>
+            <li> *ngFor </li>
+            <li> [ngSwitch] </li>
+        </ul>
+    <li> Attribute Directives </li>
+        <ul>
+            <li> [ngClass] </li>
+            <li> [ngStyle] </li>
+        </ul>
+    <li> Component Directive: change HTML and CSS </li>
+</ul>
+
+<h3> *ngIf: to hide and show data </h3>
+<button class="btn btn-primary" (click)="toggle()"> Toggle </button>
+<!-- 
+    *ngIf: if it is false it will remove content from DOM
+    [hidden]: it will remain as it is with display: none property
+ -->
+<!-- <p [hidden]="flag"> -->
+<p *ngIf="flag; else elsePart">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam porro sapiente quaerat alias, incidunt qui quos omnis excepturi dolorum sunt dolor, enim unde asperiores quia, dignissimos eveniet. Harum, est expedita.
+</p>
+
+<!-- it renders only when you calls -->
+<ng-template #elsePart>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, eum.
+    </p>
+</ng-template>
+
+<h3> *ngFor </h3>
+<ul>
+    <li *ngFor="let i of arr"> {{ i }} </li>
+</ul>
+
+ <table class="table">
+     <tr>
+        <th> id </th>
+        <th> Name </th>
+     </tr>
+     <tr *ngFor="let user of userArray">
+        <td> {{ user.id }} </td>
+        <td> {{ user.name }} </td>
+     </tr>
+ </table>
+
+<h3> [ngSwitch] </h3>
+
+<ul [ngSwitch]="city">
+    <li *ngSwitchCase="'Satara'"> Satara </li>
+    <li *ngSwitchCase="'Sangli'"> Sangli </li>
+    <li *ngSwitchCase="'Karad'"> Karad </li>
+    <li *ngSwitchCase="'Patan'"> Patan </li>
+    <li *ngSwitchDefault> No city found </li>
+</ul>
+
+<h3> Attribute Directive </h3>
+
+<p [ngClass]="flag ? 'blueColor': 'redColor'"> 
+    I am learning Angular 13.
+</p>
+
+<p [ngStyle]="{'background-color': flag ? 'yellow' : 'lightgray'}">
+    You should have relevant experience in designing wireframes and creating User Interface for the application for mobile devices iOS, iPhone, iPad or Android
+</p>
+<h3 [appColor]="'green'"> component directive </h3>
+<br> <br><br> <br><br> <br><br> <br>
+

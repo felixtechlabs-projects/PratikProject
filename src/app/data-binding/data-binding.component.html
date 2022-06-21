@@ -1,0 +1,84 @@
+<!-- 
+    *  String Interpolation: {{ variable name}}
+    Data Binding:
+    1) Property Binding: [attribute]="variable"
+    2) Event Binding: (event)="method()"
+    3) Two Way Binding => Property + event => input => FormsModule import in app.module.ts file
+        [(ngModel)]="variableName"
+ -->
+
+ <h3> {{ name }} </h3>
+ <p> {{ years }} </p>
+ <p> {{ arr }} </p>
+
+ <button class="btn btn-secondary" [disabled]="isDisabled" (click)="clickMe()"> 
+     Disabled Button  
+</button>
+
+<input type="text" [(ngModel)]="name">
+<br> <br>
+
+<img [src]="image1" alt="" height="500" width="500">
+<br> 
+
+<!-- 
+    OOPs Concepts:
+    1) Class: blueprint of object
+
+    class ClassName {
+       constructor() {} 
+    }
+    this -> referes current Object
+
+    2) Object: instance(memory allocate)(new) Of Class
+    3) Inheritance: Acquiring properties and functionalities of base class to derived class
+
+    4) Polymorphism: Many forms of Methods
+        a) Method Overloading
+        b) Method Overriding
+
+    5) Abstraction: unwanted data hiding from user
+
+    6) Encapsulation: wrapping up of data into a single unit
+    e.g. Class
+ -->
+ <!-- 
+    Component Hooks: (life cycle of component)
+
+    1) OnChanges: ngOnChanges(), Input bound properties
+    * First method that will call before init of component
+    * will call everytime when input bound properties changes automatically
+
+    2) OnInit: ngOnInit() , 
+    * Component got initialised. 
+    * call only once after first call of ngOnChanges 
+
+    3) DoCheck: ngDoCheck()
+    * angular does not or can not detect any change or action on its own then 
+    you can write code in docheck method
+    * calls immediately after ngOnInit() and everytime after ngOnChanges()
+
+    4) AfterContentInit: ngAfterContentInit():
+    * .ts Logic code init (service, directive, pipe)
+    * calls after first ngDoCheck() and only once 
+
+    5) AfterContentChecked: ngAfterContentChecked():
+    * checking
+    * calls first time after  ngAfterContentInit() and follow every time to
+        ngDoCheck()
+
+    6) AfterViewInit: ngAfterViewInit():
+    * child views, component directive, child components
+    * calls after first ngAfterContentChecked() and calls once
+
+    7) AfterViewChecked: ngAfterViewChecked():
+    * checking
+    * calls first time after ngAfterViewInit() and follow everytime to 
+        ngAfterContentChecked
+    
+    8) OnDestroy: ngOnDestroy(): 
+    * about to leave from screen
+    * called once
+    * observables unsubscribe, events detach
+
+  -->

@@ -1,0 +1,27 @@
+<p>api-consume works!</p>
+<!-- 
+    M-> Model ->
+    V-> View -> component
+    C-> Controller-> service
+
+    HTTP vs HTTPS
+    SSL certificate/ TLS certificate
+
+    HTTP methods:
+    GET, POST, PUT, DELETE, OPTIONS
+ -->
+
+ <table class="table"> 
+    <tr>
+        <th> UserId </th>
+        <th> Id </th>
+        <th> Title </th>
+        <th> Body </th>
+    </tr>
+    <tr *ngFor="let post of postArray">
+        <td> {{ post.userId }} </td>
+        <td> {{ post.id }} </td>
+        <td> {{ post.title }} </td>
+        <td> {{ post.body }} </td>
+    </tr>
+ </table>

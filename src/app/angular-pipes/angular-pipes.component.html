@@ -1,0 +1,19 @@
+<h4> Angular Pipes </h4>
+
+<p> UPPERCASE PIPE: {{ name | uppercase }} </p>
+
+<p> LOWERCASE PIPE: {{ name | lowercase }} </p>
+
+<P> NUMBER PIPE: {{ 3.2397 | number:"1.2" }}  </P>
+
+<p> DATE: {{ 1653867768000 | date:"dd/MM/yyyy hh:mm:ss a" }} </p>
+
+<p> SLICE: {{ arr | slice:3:5}} </p> <!-- end - 1 => 5 -1 = 4 -->
+
+<p> Currency: {{ 34.12 | currency:"GBP"}} </p>
+
+<p> JSON: {{ user | json }} </p>
+
+<p> percentage: {{ 00.75 | percent }} </p>
+
+<p> SQRT: {{ 25 | sqrt }} </p>

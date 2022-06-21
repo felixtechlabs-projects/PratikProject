@@ -1,0 +1,7 @@
+<p>animation works!</p>
+
+<button (click)="toggle()" class="btn btn-primary"> Toggle </button>
+
+<div [@openclose]="isOpen ? 'open' : 'close'"> 
+    <p> this div is {{ isOpen ? "Open" : "Closed"}}. </p>
+</div>
